@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<div class="container">
+    <form action="/sql/all" method="post">
+        <div class="form-group">
+            <label for="sql">sql</label>
+
+            &nbsp;&nbsp;&nbsp;
+
+            <input type="text" id="sql" name="sql" placeholder="CUD 입력">
+        </div>
+        <button type="submit">등록</button>
+    </form>
+</div> <!-- /container -->
+
+<div class="container">
+    <form action="/sql/select" method="get">
+        <div class="form-group">
+            <label for="column">select</label>
+            <input type="text" id="column" name="column" placeholder="결과의 첫 번째 컬럼만">
+            <label for="table">from</label>
+            <input type="text" id="table" name="table" placeholder="table">
+        </div>
+
+        <button type="submit">조회</button>
+    </form>
+</div> <!-- /container -->
+
+<div class="container">
+    <div>
+        <!--        <h1>Hello Spring</h1>-->
+        <!--        <p>회원 기능</p>-->
+        <p>
+            <!--            <a href="/members/new">회원 가입</a>-->
+            <!--            <a href="/members">회원 목록</a>-->
+            <a href="/members/new">등록</a>
+            <a href="/members">목록</a>
+        </p>
+    </div>
+</div> <!-- /container -->
+
+</body>
+</html>
