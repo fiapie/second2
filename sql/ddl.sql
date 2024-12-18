@@ -1,3 +1,4 @@
+### postgresql
 drop table if exists member CASCADE;
 create table member
 (
@@ -5,6 +6,14 @@ create table member
     name varchar(255),
     primary key (id)
 );
+
+### mysql
+CREATE TABLE member (
+                        id BIGINT AUTO_INCREMENT,
+                        name VARCHAR(255),
+                        PRIMARY KEY (id)
+);
+
 
 ### dml
 select * from member;
