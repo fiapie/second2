@@ -3,10 +3,7 @@ package skyds.example.second;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import skyds.example.second.repository.JdbcTemplateMemberRepository;
-import skyds.example.second.repository.JdbcTemplateSqlRepository;
-import skyds.example.second.repository.MemberRepository;
-import skyds.example.second.repository.SqlRepository;
+import skyds.example.second.repository.*;
 import skyds.example.second.service.MemberService;
 import skyds.example.second.service.SqlService;
 
@@ -29,9 +26,9 @@ public class SpringConfig {
     @Bean
     public MemberRepository memberRepository() {
 //        return new MemoryMemberRepository();
-//        return new JdbcMemberRepository();
+        return new JdbcMemberRepository(dataSource);
 //        return new JdbcTemplateMemberRepository();
-        return new JdbcTemplateMemberRepository(dataSource);
+//        return new JdbcTemplateMemberRepository(dataSource);
     }
 
     @Bean
